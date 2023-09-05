@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
-import { CartItem } from '../models/CartItem.model';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -24,14 +24,7 @@ export class DashboardComponent implements OnInit {
   constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
-    //   this.auth.GetAllProducts()
-    //     .subscribe({ next: (products)=>{
-    //       this.products=products;
-    //     },
-    //       error: (response) => {
-    //         console.log(response);
-    //       }
-    // })
+    
     this.listallproducts();
     this.addtocart();
   }
