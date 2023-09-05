@@ -13,6 +13,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class AddProductComponent implements OnInit {
   addproductForm!: FormGroup;
+  Products: any[] = [];
 
 
   constructor(private fb: FormBuilder, private auth: AuthService) { }
@@ -25,6 +26,7 @@ export class AddProductComponent implements OnInit {
       sellingprice: ['', Validators.required],
       img: ['', Validators.required]
     });
+    this.listallproducts();
   }
 
   onSubmit() {
@@ -57,6 +59,21 @@ export class AddProductComponent implements OnInit {
         this.validateAllFormFileds(control)
       }
     })
+  }
+  listallproducts() {
+    this.auth.GetAllProducts().subscribe(products => {
+      this.Products = products;
+    });
+  }
+
+  deleteProduct(productId: any) {
+    this.auth.deleteProduct(productId).subscribe(products => {
+      console.log("Product Deleted Successfully!")
+    });
+    // (error) => {
+    //     console.log("Error Occured!", error);
+    //   }
+    // );
   }
 }
 

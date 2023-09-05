@@ -20,6 +20,9 @@ public cartAddedSubject=new Subject<boolean>();
     return this.http.post<any>("https://localhost:7272/api/Cart/add",cartobj);
   }
   getcartItem():Observable<any[]>{
-    return this.http.get<any[]>("https://localhost:7272/api/Cart")
+    return this.http.get<any[]>("https://localhost:7272/api/Cart");
+  }
+  deleteProduct(productId:any){
+    return this.http.delete("https://localhost:7272/api/AddProducts/id:guid");
   }
 }
