@@ -1,0 +1,59 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offest-lg-4 offset-md-3">
+                <div class=" panel border bg-white">
+                    <div class="panel-heading">
+                        <h1 class="pt-3 font-weight-bold">Add Product</h1>
+                    </div>
+
+                    <div class="panel-body p-3" >
+                        <form [formGroup]="addproductForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" >
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="name" type="text" placeholder="Product Name" name="Name" >
+                                </div>
+                            </div>
+                            <small *ngIf="addproductForm.controls['name'].dirty && addproductForm.hasError('required','name')"
+                             class="text-danger">*name is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="description" type="text" placeholder="Description" name="Description">
+                                </div>
+                            </div>
+                            <small *ngIf="addproductForm.controls['description'].dirty && addproductForm.hasError('required','description')"
+                            class="text-danger">*Description is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="originalprice" type="text" placeholder="OriginalPrice" name="Original Price" >
+                                </div>
+                            </div>
+                            <small *ngIf="addproductForm.controls['originalprice'].dirty && addproductForm.hasError('required','originalprice')"
+                            class="text-danger">*Original Price is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="sellingprice" type="text" placeholder="SellingPrice" name="Selling price">
+                                </div>
+                            </div>
+                            <small *ngIf="addproductForm.controls['sellingprice'].dirty && addproductForm.hasError('required','sellingprice')"
+                            class="text-danger">*Selling Price is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="img" type="text" placeholder="Img Url" name="Img">
+                                </div>
+                            </div>
+                            <small *ngIf="addproductForm.controls['img'].dirty && addproductForm.hasError('required','img')"
+                            class="text-danger">*Image Url is required</small>
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Add Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

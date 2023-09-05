@@ -1,0 +1,66 @@
+<section id="product">
+    <!-- <a class="nav-link dropdown-toggle cart fw-semibold text-uppercase text-black  me-1" href="#"
+              id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-cart-shopping fs-5" style="color: #202122;"></i>
+              <span class="position-absolute  translate-middle badge rounded-pill bg-danger">
+               {{cartProducts.length}}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </a> -->
+    <div class="CartContainer">
+        <div class="row">
+            <div class="col-6">
+                Your Cart
+            </div>
+            <div class="col-6 text-end text-danger">
+                Remove All
+            </div>
+        </div>
+        <div class="row pt-1" *ngFor="let cart of cartProducts">
+            <div class="col-4">
+                <img class="img-fluid" style="height: 30px;border-radius: 50%;"
+                    src="https://cdn.opstatics.com/store/20170907/assets/images/support/support-list/model-specs-list/details/5-black.png"
+                    class="card-img-top">
+            </div>
+            <div class="col-3">
+                {{cart.Name}}
+            </div>
+            <div class="col-2">
+                {{cart.quantity + 1}}
+            </div>
+            <div class="col-2 text-end">
+                {{ cart.Price}}
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-9">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-2"> -->
+
+    <!-- </div> -->
+    <!-- <div class="col-4">
+                  <div class="Subtotal">Sub-Total</div>
+                  <div> <small> 2 items</small></div> -->
+    <!-- </div> -->
+    <!-- <div class="col-4 text-end">
+                  <strong> ${{subTotal}}</strong>
+                </div> -->
+    <!-- </div> -->
+    <div class="row">
+        <div class="col-12 text-end">
+            <button class="btn btn-sm btn-success" (click)="redirectToSale()">Checkout</button>
+        </div>
+    </div>
+ </section>
