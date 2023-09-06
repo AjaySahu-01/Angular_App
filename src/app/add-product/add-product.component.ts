@@ -66,8 +66,8 @@ export class AddProductComponent implements OnInit {
     });
   }
 
-  deleteProduct(productId: any) {
-    this.auth.deleteProduct(productId).subscribe(products => {
+  deleteProduct(id: any) {
+    this.auth.deleteProduct(id).subscribe(products => {
       console.log("Product Deleted Successfully!")
     });
   

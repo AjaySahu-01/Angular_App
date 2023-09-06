@@ -14,11 +14,12 @@ export class DashboardComponent implements OnInit {
   products: any[] = [];
   // cartobj:any[] = [];
   cartobj:any={
-  "Id": 0,
-  "Product": 'Product',
-  "Name": ' Name',
-  "Price": 10.99,
-  "Quantity": 1
+  "Id": 1,
+  "Product": '',
+  "Name": '',
+  "Price": 0,
+  "Quantity": 0,
+  "img":"https://www.nautica.com/dw/image/v2/BDCV_PRD/on/demandware.static/-/Sites-nautica-master-catalog/default/dwccc59e52/images/0731516000016_V41050_101_A.jpg"
 };
 
   constructor(private auth: AuthService) { }

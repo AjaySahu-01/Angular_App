@@ -1,4 +1,5 @@
 <section id="product">
+
     <div class="CartContainer">
         <div class="row">
             <div class="col-6">
@@ -9,17 +10,22 @@
             </div>
         </div>
         <div class="row pt-1" *ngFor="let cart of cartProducts">
-            
+            <div class="col-4">
+                <img class="img-fluid" style="height: 30px;border-radius: 50%;"
+                 [src]="cart.img">
+                    <!-- class="card-img-top"> -->
+            </div>
             <div class="col-3">
-                {{cart.Name}}
+                {{cart.name}}
             </div>
             <div class="col-2">
                 {{cart.quantity + 1}}
             </div>
             <div class="col-2 text-end">
-                {{ cart.Price}}
+                {{ cart.price}}
             </div>
         </div>
+        
     </div>
 
    

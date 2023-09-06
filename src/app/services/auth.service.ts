@@ -22,7 +22,7 @@ public cartAddedSubject=new Subject<boolean>();
   getcartItem():Observable<any[]>{
     return this.http.get<any[]>("https://localhost:7272/api/Cart");
   }
-  deleteProduct(productId:any){
+  deleteProduct(id:any){
     return this.http.delete("https://localhost:7272/api/AddProducts/id:guid");
   }
 }
