@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
       this.products = products;
     });
   }
-  addtocart(){https://github.com/AjaySahu-01/EcommerceAngularApp
+  addtocart(){
     
     this.auth.AddToCart(this.cartobj).subscribe(response => {
       this.products= response;
