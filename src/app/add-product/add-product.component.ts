@@ -70,10 +70,7 @@ export class AddProductComponent implements OnInit {
     this.auth.deleteProduct(productId).subscribe(products => {
       console.log("Product Deleted Successfully!")
     });
-    // (error) => {
-    //     console.log("Error Occured!", error);
-    //   }
-    // );
+  
   }
 }
 
