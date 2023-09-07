@@ -2,7 +2,7 @@
 
     <div class="CartContainer">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 padding-left:4px">
                 Your Cart
             </div>
             <div class="col-6 text-end text-danger">
@@ -10,21 +10,25 @@
             </div>
         </div>
         <div class="row pt-1" *ngFor="let cart of cartProducts">
-            <div class="col-4">
-                <img class="img-fluid" style="height: 30px;border-radius: 50%;"
+            <div class="col-2">
+                <img class="img-fluid " style="height: 50px; border-radius: 50%;"
                  [src]="cart.img">
-                    <!-- class="card-img-top"> -->
+                    
             </div>
-            <div class="col-3">
+            <div class="col-2 text-center">
                 {{cart.name}}
             </div>
-            <div class="col-2">
-                {{cart.quantity + 1}}
+            <div class="col-2 text-center">
+                {{cart.quantity}}
             </div>
-            <div class="col-2 text-end">
+            <div class="col-2 text-center">
                 {{ cart.price}}
             </div>
+            
+            <button class="col-2" style="height:30px"(click)="Deletecartitem(cart.id)">Delete
+            </button>
         </div>
+        <div class=" text-end">Final-Price<div>INR{{FinalPrice}}</div></div>
         
     </div>
 

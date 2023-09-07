@@ -25,4 +25,7 @@ public cartAddedSubject=new Subject<boolean>();
   deleteProduct(id:any){
     return this.http.delete("https://localhost:7272/api/AddProducts/id:guid");
   }
+  deleteCartItem(id:number){
+    return this.http.delete("https://localhost:7272/api/Cart/delete/");
+  }
 }

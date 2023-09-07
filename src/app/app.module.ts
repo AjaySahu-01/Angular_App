@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { SignupComponent } from './signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import { CartComponent } from './cart/cart.component';
 import { AddProductComponent } from './add-product/add-product.component';
-// import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -19,11 +19,9 @@ import { AddProductComponent } from './add-product/add-product.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    // LoginComponent,
-    // SignupComponent,
     AddProductComponent,
     CartComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -31,7 +29,7 @@ import { AddProductComponent } from './add-product/add-product.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -9,16 +10,29 @@ import { AuthService } from '../services/auth.service';
 export class CartComponent implements OnInit{
 
   cartProducts: any[] = [];
-  constructor(private auth: AuthService) { }
+  FinalPrice:number=0;
+
+  constructor(private auth: AuthService ,private router:Router) { }
   ngOnInit(): void {
-    this. redirectToSale();
+    this. GetAllCartItem();
+  }
+  Deletecartitem(id:number){
+    this.auth.deleteCartItem(id).subscribe(products => {
+      console.log("Product Deleted Successfully!")
+    });
   }
 
-
-  redirectToSale(){
+  GetAllCartItem(){
    
       this.auth.getcartItem().subscribe(products => {
         this.cartProducts = products;
+        this.cartProducts.forEach(element=>{
+          this.FinalPrice=this.FinalPrice+element.price;
+        });
       });
+  }
+  redirectToSale(){
+    this.router.navigateByUrl("add-product");
+
   }
 }
