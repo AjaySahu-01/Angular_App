@@ -3,9 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AuthService } from '../services/auth.service';
 
 
-
-
-
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -34,10 +31,10 @@ export class AddProductComponent implements OnInit {
       console.log(this.addproductForm.value);
       this.auth.getProduct(this.addproductForm.value).subscribe({
         next: (res => {
-          alert(res.message)
+          alert("Product is Added!")
         }),
         error: (err => {
-          alert(err?.error.message)
+          alert("Error Occur")
         })
       })
 

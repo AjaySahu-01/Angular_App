@@ -6,20 +6,7 @@ import { AuthService } from './services/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit{
+export class AppComponent{
   title = 'angular-ecommerce';
-  cartProduct:any[]=[];
-  constructor(private auth:AuthService){
-this.auth.cartAddedSubject.subscribe(res=>{
-  this.loadcart();
-})
-  }
-  ngOnInit(): void {
-    this.loadcart();
-  }
-  loadcart(){
-    this.auth.getcartItem().subscribe((res:any)=>{
-      this.cartProduct=res.data;
-    })
-  }
+ 
 }

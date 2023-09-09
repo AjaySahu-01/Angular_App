@@ -12,15 +12,15 @@ import { AuthService } from '../services/auth.service';
 export class DashboardComponent implements OnInit {
   displayForm!: FormGroup;
   products: any[] = [];
-  // cartobj:any[] = [];
-  cartobj:any={
-  "Id": 1,
-  "Product": '',
-  "Name": '',
-  "Price": 0,
-  "Quantity": 0,
-  "img":"https://www.nautica.com/dw/image/v2/BDCV_PRD/on/demandware.static/-/Sites-nautica-master-catalog/default/dwccc59e52/images/0731516000016_V41050_101_A.jpg"
-};
+  cartobj:any[] = [];
+//   cartobj:any={
+//   "Id": 1,
+//   "Product": '',
+//   "Name": '',
+//   "Price": 0,
+//   "Quantity": 0,
+//   "img":""
+// };
 
   constructor(private auth: AuthService) { }
 
@@ -45,10 +45,7 @@ export class DashboardComponent implements OnInit {
 }
 
 
-// if(response.response){
-//   alert("Product Added To Cart!");
-//   this.auth.cartAddedSubject.next(true);
-// }
+
 
 
 

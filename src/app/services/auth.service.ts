@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class AuthService {
 baseUrl="https://localhost:7272/api/AddProducts/";
-public cartAddedSubject=new Subject<boolean>();
+
   constructor(private http: HttpClient) { }
  
   GetAllProducts():Observable<any[]>{
@@ -26,6 +26,6 @@ public cartAddedSubject=new Subject<boolean>();
     return this.http.delete("https://localhost:7272/api/AddProducts/id:guid");
   }
   deleteCartItem(id:number){
-    return this.http.delete("https://localhost:7272/api/Cart/delete/");
+    return this.http.delete("https://localhost:7272/api/Cart/delete");
   }
 }
