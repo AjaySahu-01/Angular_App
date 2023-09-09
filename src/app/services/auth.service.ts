@@ -6,7 +6,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-baseUrl="https://localhost:7272/api/AddProducts/";
+
 
   constructor(private http: HttpClient) { }
  

@@ -32,9 +32,6 @@ export class AddProductComponent implements OnInit {
       this.auth.getProduct(this.addproductForm.value).subscribe({
         next: (res => {
           alert("Product is Added!")
-        }),
-        error: (err => {
-          alert("Error Occur")
         })
       })
 
