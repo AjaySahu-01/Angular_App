@@ -12,20 +12,21 @@ import { AuthService } from '../services/auth.service';
 export class DashboardComponent implements OnInit {
   displayForm!: FormGroup;
   products: any[] = [];
-  cartobj:any[] = [];
-//   cartobj:any={
-//   "Id": 1,
-//   "Product": '',
-//   "Name": '',
-//   "Price": 0,
-//   "Quantity": 0,
-//   "img":""
-// };
+  cartobj: any[] = [];
+ 
+  //   cartobj:any={
+  //   "Id": 1,
+  //   "Product": '',
+  //   "Name": '',
+  //   "Price": 0,
+  //   "Quantity": 0,
+  //   "img":""
+  // };
 
   constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
-    
+
     this.listallproducts();
     this.addtocart();
   }
@@ -35,17 +36,11 @@ export class DashboardComponent implements OnInit {
       this.products = products;
     });
   }
-  addtocart(){
-    
+  addtocart() {
+
     this.auth.AddToCart(this.cartobj).subscribe(response => {
-      this.products= response;
+      this.products = response;
     });
   }
- 
+
 }
-
-
-
-
-
-

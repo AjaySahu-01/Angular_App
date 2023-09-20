@@ -1,4 +1,4 @@
-<section id="product">
+<section id="cart">
 
     <div class="CartContainer">
         <div class="row">
@@ -19,11 +19,21 @@
                 {{cart.name}}
             </div>
             <div class="col-2 text-center">
-                {{cart.quantity}}
+            <div class="cartquantity">
+                            
+                <button (click)="decreasequantity(item)">-</button>
+
+                <span>{{cart.quantity}}</span>
+                <button (click)="increasequantity(item)">+</button>
             </div>
+        </div>
+            <!-- <div class="col-2 text-center">
+                {{cart.quantity}}
+            </div> -->
             <div class="col-2 text-center">
                 {{ cart.price}}
             </div>
+           
             
             <button class="col-2" style="height:30px"(click)="Deletecartitem(cart.id)">Delete
             </button>

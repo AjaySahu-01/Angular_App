@@ -1,12 +1,4 @@
-<div class="outer">
-    <div class="dashboard">
-        <h1>Dashboard</h1>
-        <ul>
-            <li><a routerLink="cart"> Cart</a></li>
-            <li><a routerLink="add-product">Add Product</a></li>
-            <li><a routerlink="login">Login</a></li>
-        </ul>
-    </div>
+<div class=outer>
     <section id="product">
 
         <h1 class=" font-weight-bold">All Products</h1>
@@ -30,10 +22,14 @@
                             <h6>Price:{{product.originalPrice}}</h6>
 
                         </div>
+                        
                         <div class="col-14 text end align text-center">
                             <button class="btn btn-sm btn-success" (click)="addtocart()">Add To Cart</button>
 
                         </div>
+
+
+
                     </div>
                 </div>
 

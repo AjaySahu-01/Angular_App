@@ -1,0 +1,98 @@
+.body{
+    font-family: sans-serif;}
+.dash{
+    margin: 0%;
+    color: cornflowerblue;
+    
+}
+.common-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+}
+.form-button{
+    height: 35px;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+    color: cornflowerblue;
+}
+.MessagePrompt{
+    color: green;
+    text-align: center;
+}
+
+.outer {
+    height: 100vh;
+    background: linear-gradient(to top,#7f7fe2 20%,#6e6af6 90%) no-repeat;
+}
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#forget {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer
+}
+.btn{
+    margin-top: 20px;
+    border-radius: 15px;
+}
+.panel{
+    min-height: 380px;
+    border-radius: 16px;
+    margin-top: 100px;
+}
+.input-field{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border:  1px solid #ddd;
+    color:cornflowerblue
+
+}
+.input-field.error{
+    border: 1px solid red ;
+    color: red;
+}
+input[type='text'],
+input[type='password']{
+    border: none;
+    overflow: unset;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+}
+.fa-eye-slash.btn{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+img{
+    width:100px;
+    height:140px;
+    object-fit: cover;
+    border-radius: 15%;
+    position: relative;
+}

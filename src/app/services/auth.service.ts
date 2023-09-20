@@ -11,21 +11,30 @@ export class AuthService {
   constructor(private http: HttpClient) { }
  
   GetAllProducts():Observable<any[]>{
-    return this.http.get<any[]>("https://localhost:7272/api/AddProducts/GetAllProducts");
+    return this.http.get<any[]>("https://localhost:7096/api/Products/GetAllProducts");
   }
-  getProduct(obj:any){
-    return this.http.post<any>("https://localhost:7272/api/AddProducts/Addproduct",obj);
+  AddProduct(obj:any){
+    return this.http.post<any>("https://localhost:7096/api/Products/Addproduct",obj);
   }
   AddToCart(cartobj:any){
-    return this.http.post<any>("https://localhost:7272/api/Cart/add",cartobj);
+    return this.http.post<any>("https://localhost:7096/api/Carts/add",cartobj);
   }
   getcartItem():Observable<any[]>{
-    return this.http.get<any[]>("https://localhost:7272/api/Cart");
+    return this.http.get<any[]>("https://localhost:7096/api/Carts");
   }
   deleteProduct(id:any){
-    return this.http.delete("https://localhost:7272/api/AddProducts/id:guid");
+    return this.http.delete("https://localhost:7096/api/AddProducts/$id}");
   }
   deleteCartItem(id:number){
-    return this.http.delete("https://localhost:7272/api/Cart/delete");
+    return this.http.delete("https://localhost:7096/api/Carts/Delete");
+  }
+  login(loginobj:any){
+    return this.http.post<any>("https://localhost:7096/api/Users/authenticate",loginobj);
+  }
+  Signup(signupobj:any){
+    return this.http.post<any>("https://localhost:7096/api/Users/register",signupobj);
+  }
+  updatequantity(item:any){
+    return this.http.put("https://localhost:7096/api/Carts/update-quantity/",item);
   }
 }

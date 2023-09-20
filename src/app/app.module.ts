@@ -11,16 +11,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { CartComponent } from './cart/cart.component';
 import { AddProductComponent } from './add-product/add-product.component';
-
-
-
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     AddProductComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    SignupComponent,
+    HomeComponent
 
   ],
   imports: [

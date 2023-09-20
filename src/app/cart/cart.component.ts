@@ -11,7 +11,7 @@ export class CartComponent implements OnInit{
 
   cartProducts: any[] = [];
   FinalPrice:number=0;
-
+  item:number=0;
   constructor(private auth: AuthService ,private router:Router) { }
   ngOnInit(): void {
     this. GetAllCartItem();
@@ -32,7 +32,15 @@ export class CartComponent implements OnInit{
       });
   }
   redirectToSale(){
-    this.router.navigateByUrl("add-product");
+    this.router.navigateByUrl("/");
 
+  }
+  increasequantity(item:any){
+    item.quantity+=1;
+    this.auth.updatequantity(item);
+  }
+  decreasequantity(item:any){
+    item.quantity-=1;
+    this.auth.updatequantity(item);
   }
 }

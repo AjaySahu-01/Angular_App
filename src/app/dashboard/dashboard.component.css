@@ -104,3 +104,13 @@
    
     background: linear-gradient(to top,#7f7fe2 20%,#6e6af6 90%) repeat;
 }
+.cartquantity button{
+    padding:5px;
+    margin-bottom: 5px;
+   
+    
+}
+.cartquantity input{
+   width:27px;
+   padding: 5px;
+}

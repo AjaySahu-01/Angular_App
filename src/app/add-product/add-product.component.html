@@ -50,6 +50,7 @@
                             <small *ngIf="addproductForm.controls['img'].dirty && addproductForm.hasError('required','img')"
                             class="text-danger">*Image Url is required</small>
                             <button (click)="onSubmit()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Add Product</button>
+                            
                         </form>
                     </div>
                 </div>
@@ -86,7 +87,7 @@
 
                     </div>
                     <div class="col-14 text end align text-center">
-                        <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+                        <button class="btn btn-sm btn-danger" (click)="deleteproduct(product.id)">Delete</button>
 
                     </div>
                 </div>

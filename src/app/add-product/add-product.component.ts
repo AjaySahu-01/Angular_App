@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 export class AddProductComponent implements OnInit {
   addproductForm!: FormGroup;
   Products: any[] = [];
-
+  
 
   constructor(private fb: FormBuilder, private auth: AuthService) { }
 
@@ -24,14 +24,16 @@ export class AddProductComponent implements OnInit {
       img: ['', Validators.required]
     });
     this.listallproducts();
+   
   }
 
   onSubmit() {
     if (this.addproductForm.valid) {
       console.log(this.addproductForm.value);
-      this.auth.getProduct(this.addproductForm.value).subscribe({
+      this.auth.AddProduct(this.addproductForm.value).subscribe({
         next: (res => {
           alert("Product is Added!")
+          this.addproductForm.reset();
         })
       })
 
@@ -60,11 +62,12 @@ export class AddProductComponent implements OnInit {
     });
   }
 
-  deleteProduct(id: any) {
+  deleteproduct(id: any) {
     this.auth.deleteProduct(id).subscribe(products => {
       console.log("Product Deleted Successfully!")
     });
   
   }
+  
 }
 
